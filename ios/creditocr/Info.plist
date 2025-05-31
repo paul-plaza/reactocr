@@ -48,5 +48,10 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>Necesitamos acceder a la cámara para escanear tarjetas</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Necesitamos acceder a la galería para seleccionar imágenes</string>
+
 </dict>
 </plist>

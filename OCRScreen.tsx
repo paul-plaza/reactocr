@@ -5,6 +5,10 @@ import { NativeModules } from 'react-native';
 
 const { MLKitOCR } = NativeModules;
 
+if (!MLKitOCR) {
+    console.error('MLKitOCR module no esta disponible');
+}
+
 export default function OCRCameraScreen() {
     const camera = useRef<Camera>(null);
     const devices = useCameraDevices();
@@ -46,7 +50,7 @@ export default function OCRCameraScreen() {
             });
 
             const result = await MLKitOCR.recognizeText(photo.path);
-            
+
             console.log('Texto detectado:', result);
             setDetectedText(result);
         } catch (err) {
